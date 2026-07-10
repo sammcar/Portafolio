@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  quality:
+    name: Lint · Typecheck · Test · Build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+
+      - name: Install (clean, lockfile-exact)
+        run: npm ci
+
+      - name: Lint & format (Biome)
+        run: npm run lint
+
+      - name: Typecheck (tsc strict)
+        run: npm run typecheck
+
+      - name: Tests + coverage (Vitest)
+        run: npm run test:coverage
+
+      - name: Security audit (dependencies)
+        run: npm run audit:security
+
+      - name: Build (also validates all MDX content)
+        run: npm run build

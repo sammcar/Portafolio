@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About"
+  },
+  "home": {
+    "title": "Mechatronics · Robotics · Software",
+    "subtitle": "I build robots, embedded systems and the software that drives them.",
+    "cta": "View projects"
+  },
+  "projects": {
+    "title": "Projects",
+    "empty": "No projects yet. Add an MDX file under content/projects."
+  },
+  "about": {
+    "title": "About me"
+  },
+  "footer": {
+    "rights": "All content rights reserved."
+  }
+}

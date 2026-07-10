@@ -1,0 +1,22 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "about": "Acerca de"
+  },
+  "home": {
+    "title": "Mecatrónica · Robótica · Software",
+    "subtitle": "Construyo robots, sistemas embebidos y el software que los mueve.",
+    "cta": "Ver proyectos"
+  },
+  "projects": {
+    "title": "Proyectos",
+    "empty": "Aún no hay proyectos. Agrega un archivo MDX en content/projects."
+  },
+  "about": {
+    "title": "Sobre mí"
+  },
+  "footer": {
+    "rights": "Todos los derechos del contenido reservados."
+  }
+}

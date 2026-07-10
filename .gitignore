@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Testing
+coverage/
+
+# Env — NEVER commit secrets
+.env
+.env*.local
+
+# Vercel
+.vercel
+
+# Editor / OS
+.DS_Store
+*.swp
+.idea/
+
+# TypeScript
+*.tsbuildinfo

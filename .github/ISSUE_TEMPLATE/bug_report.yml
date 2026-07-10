@@ -1,0 +1,21 @@
+name: Bug report
+description: Something is broken
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: Steps to reproduce + expected vs actual behavior.
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: Page / URL
+      placeholder: /es/projects/tum-quad
+  - type: dropdown
+    id: locale
+    attributes:
+      label: Locale affected
+      options: [en, es, both]
