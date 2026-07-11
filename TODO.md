@@ -16,7 +16,8 @@
       here: SSG-only site, CSS is repo-controlled and PR-reviewed, no user
       input reaches the CSS pipeline. No sane fix upstream yet (forced "fix"
       downgrades to Next 9). Closes itself when Next bumps its internal postcss.
-- [ ] ~18 vulns inside `node_modules/npm/**` via `semantic-release` (devDependency).
-      Run only in ephemeral CI runners during release; never shipped to prod.
-      Excluded from CI gate via `npm audit --omit=dev`. Dependabot monitors.
-      Accepted: 2026-07-10 · Review: next major of semantic-release.
+- [x] ~18 vulns inside node_modules/npm/\*\* via semantic-release (devDependency).
+      CLOSED 2026-07-10: semantic-release 25 upgrade (PR #4) modernized its
+      embedded npm. Audit dropped from 21 to 2 moderate.
+- [ ] @vitejs/plugin-react 6.x blocked: requires vite@8, but vitest@3 pins
+      vite@≤7. Dependabot told to ignore the major. Revisit when vitest 4 lands.Accepted: 2026-07-10 · Review: next major of semantic-release.
