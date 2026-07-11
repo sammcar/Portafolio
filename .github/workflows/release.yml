@@ -25,9 +25,13 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
 
+      - name: Align npm with local (lockfile v11 compat)
+        run: npm install -g npm@11
+
       - run: npm ci
 
       - name: semantic-release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HUSKY: 0
         run: npx semantic-release

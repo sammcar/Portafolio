@@ -17,6 +17,9 @@ jobs:
           node-version-file: .nvmrc
           cache: npm
 
+      - name: Align npm with local (lockfile v11 compat)
+        run: npm install -g npm@11
+
       - name: Install (clean, lockfile-exact)
         run: npm ci
 
